@@ -1,0 +1,32 @@
+{% comment %} {% extends 'base.html' %}
+
+{% block content %}
+  <h1 class=text-center>articles</h1>
+  <a href="{% url 'articles:new' %}">new</a>
+  <hr>
+  {% for article in articles %}
+    <p>글 번호: {{ article.pk }}</p>
+    <p>글 제목: {{ article.title }}</p>
+    <p>글 내용: {{ article.content }}</p>
+    <hr>     
+  {% endfor %}
+{% endblock content %} {% endcomment %}
+
+
+
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+
+{% comment %} {% block content %}
+  <h1 class=text-center>articles</h1>
+  <a href="{% url 'articles:new' %}">new</a>
+  <hr>
+  {% for article in articles %}
+    <label for="pk">글번호</label>
+    <input type="text" name="pk" id="pk" value={{article.pk}}>
+    <label for="title">글제목</label>
+    <input type="text" name="title" id="title" value={{article.title}}>
+    <label for="title">글내용</label>
+    <input type="text" name="title" id="title" value={{article.title}}>
+    <hr>     
+  {% endfor %}
+{% endblock content %} {% endcomment %}

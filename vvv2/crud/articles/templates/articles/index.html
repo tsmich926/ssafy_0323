@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>index</h1>
+  <a href="">생성</a>
+  {% for article in articles %}
+    {% comment %} <p>{{ article.id }} - {{ article.title }}- {{ article.content }}</p> {% endcomment %}
+    <a href="{% url 'articles:detail' article.id %}">{{article.title}}</a>
+    <p>{{article.content}}</p>
+    <hr>
+  {% endfor %}
+{% endblock content %}

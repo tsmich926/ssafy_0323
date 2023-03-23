@@ -1,0 +1,21 @@
+h2 {
+  color: bisque;
+}
+
+p {
+    color: rgb(185, 126, 37);
+  
+}
+
+.blue {
+  color: blue;
+}
+
+.green {
+  color: green;
+}
+
+#red {
+  color: red; !important
+  
+}

@@ -1,0 +1,22 @@
+
+
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %}
+
+<img src="{% static 'articles/cat2.png' %} " alt="cat2">
+<h1>Movies</h1>
+<a href="{% url 'articles:create' %}">CREATE</a>
+<hr />
+{% for article in articles  %}
+  {% comment %} <a href="{% url 'articles:detail' article.pk %}">글번호:{{article.pk}}</a> {% endcomment %}
+  <p>제목:{{article.user}}</p>
+  <p>제목:{{article.superv}}</p>
+  <p>코멘트:{{article.coment}}</p>
+  <a href="{% url 'articles:detail' article.pk %}">[detail]</a>
+  <hr>
+{% endfor %}
+
+
+{% endblock content %}
+

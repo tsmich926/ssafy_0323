@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>detail</h1>
+  <hr>
+  
+  {% for article in articles %}
+  <p>글제목: {{article.title}}</p>
+  <p>글내용: {{article.content}}</p>
+  <p>생성시간: {{article.created_at}}</p>
+  <p>수정시간: {{article.updated_at}}</p>
+  {% endfor %}
+
+{% endblock  %}

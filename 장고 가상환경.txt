@@ -1,0 +1,85 @@
+v가상환경만들기
+
+
+템플릿 샌드위치구조로 html생성
+템플릿 중복요소
+base.html을 만들고 상속받아서 쓰기
+
+app 은 자동으로 검색
+바깥에 있는건 검색안해줌
+ssetings.py templates에 dir 
+
+폴더생성
+python -m venv venv
+source veve/Scripts/activate
+django-admin startproject crud .
+django-admin startapps
+프로젝트 생성 .
+앱생성
+앱등록
+
+공통 html이 필요하면 BASE_DIR/template에 만들고
+settings에 폴더를 추가
+
+project urls.py 에 각 앱별 urls 등록
+각 앱별 urls.py를 생성
+-app_name등록 url별 name을 등록
+
+각 page생성
+urls.py에 path등록
+view.py에 함수등록
+templates/app_name/에 html생성
+
+
+과제
+실습 2-2 2-4 
+
+조회가 get
+변경이 post
+
+
+필수
+과제3-2 3-4
+실습 3-1 3-2 실습1-4
+
+python manage.py makemigrations
+python manage.py migrate
+
+
+과제4-2
+1234 실습 5
+
+
+http
+웹에서 이루어지는 데이터통신규약
+비연결지향
+무상태
+
+서버에게 모든요청은 새롭다
+요청에 대한 응답을 보낸뒤에는 연결을 끊음
+클라이언트와 서버는 비연결
+
+무상태
+모든요청은 독립적
+연결을 끊는순간 정보가 유지 되지않음 
+기억하고 있지 않다
+
+http + 기능 =>연결돼있는 듯한 상태를 가질수있게 함
+기능1.쿠키---상태가 있는 세션을 만들도록 해줌
+	쿠키는 웹에 전송하는 아주 작은 데이터의 조각
+	클라이언트는 요청을 보낼때 쿠키와 함께 보냄
+	쿠키로 로그인상태 유지
+
+기능2.세션---쿠키에 넣어놓은 데이터에 대한 데이터
+		세션쿠키 브라우저 종료시 삭제됨
+
+
+
+클라이언트가 요청-서버는 응답으로 쿠키를 담아서 줌
+그뒤부터는 c가 쿠키를 넣은 요청을 보냄
+
+
+로그아웃 
+
+load bootstrap5
+

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>throw</h1>
+  <form action="{% url 'articles:catch' %}" method="GET">
+    <div>
+      <label for="message">메세지</label>
+      <input type="text" name="msg1" id="message">
+    </div>
+    <div>
+      <label for="message2">메세지2</label>
+      <input type="text" name="msg2" id="message2">
+    </div>
+    <input type="submit" value="제출">
+  </form>
+{% endblock content %}
